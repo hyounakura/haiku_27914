@@ -1,0 +1,14 @@
+.haiku-new-middle {
+  height: 60vh;
+}
+.haiku-new-btn {
+  height: 30vh;
+  background-color: plum;
+}
+
+
+@media screen and (max-width: 480px) {
+  .haiku-new-middle {
+    height: 55vh;
+  }
+}

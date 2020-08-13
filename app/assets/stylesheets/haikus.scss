@@ -1,0 +1,40 @@
+.haiku-top {
+  height: 10vh;
+  background-color: rgb(156, 50, 18);
+  &__left {
+    position: absolute;
+    top: 3vh;
+    left: 3vw;
+    height: 5vh;
+    width: 10vw;
+    background-color: plum;
+  }
+  &__right {
+    position: absolute;
+    top: 3vh;
+    right: 3vw;
+    height: 5vh;
+    width: 10vw;
+    background-color: plum;
+  }
+}
+.haiku-middle {
+  height: 80vh;
+  background-color: green;
+}
+.haiku-btn {
+  height: 10vh;
+  background-color: palevioletred;
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .haiku-top {
+    height: 15vh;
+  }
+  .haiku-middle {
+    height: 75vh;
+  }
+
+}

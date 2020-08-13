@@ -1,0 +1,12 @@
+.haiku-top
+  = link_to '#', class: "mypage" do
+    .haiku-top__left
+      マイページ
+.haiku-new-middle
+.haiku-new-btn
+  = form_with model: @haiku, local: true do |f|
+    
+    = f.text_field :kami, class: 'form-kami', maxlength:"15"
+    = f.text_field :naka, class: 'form-naka', maxlength:"20"
+    = f.text_field :simo, class: 'form-simo', maxlength:"15"
+    = f.submit "詠む", class: "submit-haiku"
