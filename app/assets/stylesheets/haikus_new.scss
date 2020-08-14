@@ -1,14 +1,97 @@
 .haiku-new-middle {
   height: 60vh;
+  &__kami {
+    height: 33.3%;
+    position: relative;
+    &__content {
+      font-size: 5vh;
+      font-family: 'HuiFontP109';
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      opacity: 0;
+    }
+  }
+  &__naka {
+    height: 33.3%;
+    position: relative;
+    &__content {
+      font-size: 5vh;
+      font-family: 'HuiFontP109';
+      position: absolute;
+      top: 45%;
+      left: 33%;
+      opacity: 0;
+    }
+  }
+  &__simo {
+    height: 33.4%;
+    position: relative;
+    &__content {
+      font-size: 5vh;
+      font-family: 'HuiFontP109';
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      opacity: 0;
+    }
+  }
+
 }
 .haiku-new-btn {
   height: 30vh;
   background-color: plum;
+  padding-top: 1.5vh;
+  .form-content {
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+  }
+  .form-content-submit {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+form {
+  height: 100%;
+}
+.form-kami, .form-naka, .form-simo {
+  height: 4vh;
+  width: 40vw;
 }
 
 
 @media screen and (max-width: 480px) {
-  .haiku-new-middle {
-    height: 55vh;
+  .haiku-new-middle__kami__content {
+    font-size: 4vh;
+    top: 60%;
+    left: 20%;
+  }
+  .haiku-new-middle__naka__content {
+    font-size: 4vh;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+  }
+  .haiku-new-middle__simo__content {
+    font-size: 4vh;
+    top: 30%;
+    left: 50%;
   }
 }
+
+
+
+@font-face{
+  font-family:'HuiFontP109';
+  src:url('https://dl.dropboxusercontent.com/s/6snqvg654tirsyv/HuiFontP109.eot');
+  src:url('https://dl.dropboxusercontent.com/s/6snqvg654tirsyv/HuiFontP109.eot?#iefix') format('embedded-opentype'),
+  url('https://dl.dropboxusercontent.com/s/7pscemjdvt0wyiq/HuiFontP109.woff') format('woff'),
+  url('https://dl.dropboxusercontent.com/s/0w9uuopxrns8ehi/HuiFontP109.ttf') format('truetype'),
+  url('https://dl.dropboxusercontent.com/s/xnnsbxtz8o6d98i/HuiFontP109.svg#HuiFontP109') format('svg');
+  }
