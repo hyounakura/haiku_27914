@@ -3,10 +3,25 @@
     .haiku-top__left
       マイページ
 .haiku-new-middle
+  .haiku-new-middle__kami
+    .haiku-new-middle__kami__content
+  .haiku-new-middle__naka
+    .haiku-new-middle__naka__content
+  .haiku-new-middle__simo
+    .haiku-new-middle__simo__content
 .haiku-new-btn
-  = form_with model: @haiku, local: true do |f|
-    
-    = f.text_field :kami, class: 'form-kami', maxlength:"15"
-    = f.text_field :naka, class: 'form-naka', maxlength:"20"
-    = f.text_field :simo, class: 'form-simo', maxlength:"15"
-    = f.submit "詠む", class: "submit-haiku"
+  = form_with model: @haiku, id: 'haiku-form', local: true do |f|
+    .form-content
+      .form-content__kami
+        上の句：
+        = f.text_field :kami, class: 'form-kami', maxlength:"15"
+    .form-content
+      .form-content__naka
+        中の句：
+        = f.text_field :naka, class: 'form-naka', maxlength:"20"
+    .form-content
+      .form-content__simo
+        下の句：
+        = f.text_field :simo, class: 'form-simo', maxlength:"15"
+    .form-content-submit
+      = f.submit "詠む", class: "submit-haiku"
