@@ -1,5 +1,12 @@
 class HaikusController < ApplicationController
   def index
+    latitude = params[:latitude]
+    longitude = params[:longitude]
+    @haikus = Haiku.within_box(5, latitude, longitude)
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def new
@@ -18,6 +25,6 @@ class HaikusController < ApplicationController
   private
 
   def haiku_params
-    params.require(:haiku).permit(:kami, :naka, :simo).merge(user_id: current_user.id)
+    params.require(:haiku).permit(:kami, :naka, :simo).merge(user_id: current_user.id, latitude: params[:latitude], longitude: params[:longitude])
   end
 end
