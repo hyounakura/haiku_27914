@@ -21,6 +21,43 @@
 .haiku-middle {
   height: 80vh;
   background-color: green;
+  overflow: scroll;
+  &__contents {
+    height: 20vh;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    &__content {
+      height: 15vh;
+      width: 60vw;
+      background-color: red;
+      padding: 3vh 2vw;
+      display: flex;
+      &__left {
+        height: 100%;
+        width: 80%;
+        background-color: skyblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          display: block;
+        }
+      }
+      &__right {
+        height: 100%;
+        width: 20%;
+        background-color: springgreen;
+        position: relative;
+        span {
+          position: absolute;
+          right: 1vw;
+          bottom: 0;
+        }
+      }
+    }
+  }
 }
 .haiku-btn {
   height: 10vh;

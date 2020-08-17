@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_13_022457) do
+ActiveRecord::Schema.define(version: 2020_08_15_074638) do
 
   create_table "haikus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "kami", null: false
@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(version: 2020_08_13_022457) do
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
     t.index ["user_id"], name: "index_haikus_on_user_id"
   end
 

@@ -1,5 +1,5 @@
 .haiku-top
-  = link_to '#', class: "mypage" do
+  = link_to destroy_user_session_path, method: :delete, class: "mypage" do
     .haiku-top__left
       マイページ
   = link_to new_haiku_path, class: "create-haiku" do
