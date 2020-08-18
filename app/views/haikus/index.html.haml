@@ -1,7 +1,6 @@
 .haiku-top
-  = link_to destroy_user_session_path, method: :delete, class: "mypage" do
-    .haiku-top__left
-      マイページ
+  = link_to users_path do
+    = icon('fa', 'user', class: "haiku-top__icon")
   = link_to new_haiku_path, class: "create-haiku" do
     .haiku-top__right
       一句

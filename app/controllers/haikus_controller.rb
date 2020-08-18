@@ -22,6 +22,10 @@ class HaikusController < ApplicationController
     end
   end
 
+  def show
+    @haiku = Haiku.find(params[:id])
+  end
+
   private
 
   def haiku_params

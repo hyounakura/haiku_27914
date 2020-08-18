@@ -1,6 +1,7 @@
 $(function(){
   function buildHTML(haiku){
     let html = `<div class="haiku-middle__contents" data-haiku-id=${haiku.id}>
+    <a href="/haikus/${haiku.id}">
     <div class="haiku-middle__contents__content">
     <div class="haiku-middle__contents__content__left">
     <span>${haiku.name}さんが${haiku.prefecture}${haiku.city}${haiku.ward}で一句詠みました。</span>
@@ -9,6 +10,7 @@ $(function(){
     <span>日付</span>
     </div>
     </div>
+    </a>
     </div>`
     return html;
   };
@@ -36,6 +38,9 @@ $(function(){
             });
           }
         })
+        .fail(function() {
+          alert('error');
+        });
       },
 
       function(error) {

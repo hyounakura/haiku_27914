@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def pick_out_ward(address)
     num = address.index(',')
-    address.slice(0, (num - 1))
+    address.slice(0, num)
   end
 
   def pick_out_city(address)

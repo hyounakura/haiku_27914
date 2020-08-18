@@ -1,0 +1,36 @@
+<div id='map'></div>
+
+<style>
+#map{
+  height: 80vh;
+}
+</style>
+
+
+  <script>
+  function initMap(){
+    let map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 39.061333, lng: 137.855614},
+    zoom: 5
+    });
+  <% haikus.each do |haiku| %>
+    <% if haiku.latitude != nil %>
+    let contentString_<%= haiku.id %>  = '<%= link_to "#{pick_out_city(haiku.address)}で一句", haiku_path(haiku.id) %>';
+    let infowindow_<%= haiku.id %>  = new google.maps.InfoWindow({
+        content: contentString_<%= haiku.id %>
+      });
+    let marker_<%= haiku.id %> = new google.maps.Marker({
+      position: new google.maps.LatLng(<%= haiku.latitude %>, <%= haiku.longitude %>),
+      draggable: false,
+      map: map,
+      animation: google.maps.Animation.DROP
+      });
+    marker_<%= haiku.id %>.addListener('click', function() {
+          infowindow_<%= haiku.id %> .open(map, marker_<%= haiku.id %>);
+    });
+    <% end %>
+  <% end %>
+  };
+  </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<%=Rails.application.credentials.GOOGLE_MAP_KEY%>&callback=initMap" async defer></script>
