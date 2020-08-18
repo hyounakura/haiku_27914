@@ -1,0 +1,15 @@
+.haiku-top
+  = link_to '#', class: "mypage" do
+    .haiku-top__left
+      マイページ
+.haiku-new-middle
+  .haiku-new-middle__kami
+    .haiku-new-middle__kami__content
+      = @haiku.kami
+  .haiku-new-middle__naka
+    .haiku-new-middle__naka__content
+      = @haiku.naka
+  .haiku-new-middle__simo
+    .haiku-new-middle__simo__content
+      = @haiku.simo
+.haiku-new-btn

@@ -1,0 +1,7 @@
+.haiku-user-top
+  .haiku-user-top__user-name
+    = current_user.name
+    さん
+.haiku-middle
+  = render partial: 'google-map', locals: { haikus: @haikus }
+.haiku-btn
