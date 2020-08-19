@@ -1,7 +1,6 @@
 .haiku-top
-  = link_to '#', class: "mypage" do
-    .haiku-top__left
-      マイページ
+  = link_to haikus_path, class: "mypage" do
+    = icon('fa', 'home')
 .haiku-new-middle
   .haiku-new-middle__kami
     .haiku-new-middle__kami__content

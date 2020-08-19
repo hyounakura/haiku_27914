@@ -4,7 +4,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   &__user-name {
     margin-right: 2vw;
+  }
+  .fa {
+    display: block;
+    color: plum;
+    position: absolute;
+    top: 20%;
+    left: 1%;
+    font-size: 6vh;
   }
 }

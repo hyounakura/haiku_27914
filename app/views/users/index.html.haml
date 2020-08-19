@@ -1,4 +1,6 @@
 .haiku-user-top
+  = link_to haikus_path, class: "mypage" do
+    = icon('fa', 'home')
   .haiku-user-top__user-name
     = current_user.name
     さん

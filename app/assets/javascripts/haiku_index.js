@@ -62,3 +62,10 @@ $(function(){
     );
   };
 });
+
+// if( navigator.geolocation ){
+//   // 現在位置を取得できる場合の処理
+//   console.log('ok')
+//   } else {
+//   // 現在位置を取得できない場合の処理
+//   }
