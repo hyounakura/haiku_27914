@@ -1,5 +1,6 @@
 .haiku-new-middle {
   height: 60vh;
+  background-color: white;
   &__kami {
     height: 33.3%;
     position: relative;
@@ -42,18 +43,34 @@
   height: 30vh;
   background-color: palevioletred;
   padding-top: 1.5vh;
+  border: solid 0.5vh rgb(201, 79, 8);
   .form-content {
     height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2vh;
+    font-size: 2.5vh;
+    color: rgb(110, 4, 124);
+    font-family: 'HuiFontP109';
+    opacity: 0.4;
   }
   .form-content-submit {
     height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+    .submit-haiku {
+      height: 5vh;
+      width: 8vw;
+      background-color: rgb(243, 125, 89);
+      border: solid 0.5vh rgb(201, 124, 8);
+      border-radius: 2vh;
+      cursor: pointer;
+      color: rgb(158, 12, 151);
+      font-family: 'HuiFontP109';
+      font-size: 3vh;
+    }
   }
 }
 
@@ -62,7 +79,10 @@ form {
 }
 .form-kami, .form-naka, .form-simo {
   height: 4vh;
-  width: 40vw;
+  width: 30vw;
+  background-color: rgb(240, 201, 151);
+  border: solid rgb(158, 12, 151) 0.3vh;
+  border-radius: 1vh;
 }
 
 

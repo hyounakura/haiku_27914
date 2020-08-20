@@ -1,16 +1,27 @@
 $(function(){
+
   function buildHTML(haiku){
     let html = `<div class="haiku-middle__contents" data-haiku-id=${haiku.id}>
-    <a href="/haikus/${haiku.id}">
     <div class="haiku-middle__contents__content">
     <div class="haiku-middle__contents__content__left">
-    <span>${haiku.name}さんが${haiku.prefecture}${haiku.city}${haiku.ward}で一句詠みました。</span>
+    <div class="haiku-middle__contents__content__left__name">
+    <a href="/users/${haiku.user_id}">
+    <span>${haiku.name}さん</span>
+    </a>
     </div>
+    <div class="haiku-middle__contents__content__left__haiku">
+    <span>${haiku.prefecture}${haiku.city}${haiku.ward}で一句詠みました。</span>
+    <span class="haiku-created-at">${haiku.created_at}前</span>
+    </div>
+    </div>
+    <a href="/haikus/${haiku.id}">
     <div class="haiku-middle__contents__content__right">
-    <span>日付</span>
+    <div class="haiku-middle__contents__content__right__haidoku">
+    拝読
     </div>
     </div>
     </a>
+    </div>
     </div>`
     return html;
   };
@@ -22,11 +33,13 @@ $(function(){
       function(position) {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
+        const distance = $("select").val();
+        console.log(distance);
         $.ajax({
           url: "/",
           type: "GET",
           dataType: 'json',
-          data: {latitude: latitude, longitude: longitude}
+          data: {latitude: latitude, longitude: longitude, distance: distance}
         })
         .done(function(haikus) {
           if (haikus.length !== 0) {
@@ -34,7 +47,7 @@ $(function(){
             $.each(haikus, function(i, haiku) {
               insertHTML += buildHTML(haiku)
               $(".haiku-middle").empty();
-              $(".haiku-middle").prepend(insertHTML);
+              $(".haiku-middle").append(insertHTML);
             });
           }
         })

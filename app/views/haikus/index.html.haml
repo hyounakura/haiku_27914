@@ -2,7 +2,20 @@
   = link_to users_path do
     = icon('fa', 'user', class: "haiku-top__icon")
   = link_to new_haiku_path, class: "create-haiku" do
-    .haiku-top__right
-      一句
+    = icon('fa', 'edit', class: "haiku-top__create-icon")
+  .haiku-top__top-title
+    %span 現在地から
+    %select
+      %option{value: 1} 1
+      %option{value: 5, selected: "selected"} 5
+      %option{value: 10} 10
+      %option{value: 30} 30
+      %option{value: 100} 100
+      %option{value: 300} 300
+      %option{value: 500} 500
+      %option{value: 1000} 1000
+      %option{value: 2000} 2000
+      %option{value: 3000} 3000
+    %span km以内の俳句
 .haiku-middle
 .haiku-btn

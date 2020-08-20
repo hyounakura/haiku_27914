@@ -1,19 +1,22 @@
 .haiku-user-top {
   height: 10vh;
   background-color: rgb(156, 50, 18);
+  border: solid 0.5vh palevioletred;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   &__user-name {
+    color: pink;
+    font-size: 3vh;
     margin-right: 2vw;
   }
   .fa {
     display: block;
     color: plum;
     position: absolute;
-    top: 20%;
-    left: 1%;
-    font-size: 6vh;
+    top: 25%;
+    left: 1.5%;
+    font-size: 5vh;
   }
 }
