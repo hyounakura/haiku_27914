@@ -1,0 +1,26 @@
+.haiku-user-top
+  = link_to root_path, class: "mypage" do
+    = icon('fa', 'home')
+  .haiku-user-top__user-name
+    %span= current_user.name
+    %span> さんのお気に入り俳句一覧
+.haiku-middle
+  - @favorites.each do |fav|
+    .haiku-middle__contents
+      .haiku-middle__contents__content
+        .haiku-middle__contents__content__left
+          .haiku-middle__contents__content__left__name
+            = link_to user_path(fav.haiku.user.id) do
+              %span=fav.haiku.user.name
+              %span> さん
+          .haiku-middle__contents__content__left__haiku
+            %span=pick_out_prefecture(fav.haiku.address)
+            %span>=pick_out_city(fav.haiku.address)
+            %span=pick_out_ward(fav.haiku.address)
+            %span> で一句詠みました。
+            %span.haiku-created-at=time_ago_in_words(fav.haiku.created_at)
+        = link_to haiku_path(fav.haiku.id) do
+          .haiku-middle__contents__content__right
+            .haiku-middle__contents__content__right__haidoku
+              拝読
+.haiku-btn

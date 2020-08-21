@@ -1,4 +1,6 @@
 class Haiku < ApplicationRecord
+  has_one :favorite, dependent: :destroy
+  has_many :users, through: :favorites
   belongs_to :user
   reverse_geocoded_by :latitude, :longitude
   after_validation :reverse_geocode

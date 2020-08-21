@@ -3,6 +3,9 @@
   background-color: rgb(156, 50, 18);
   border: solid 0.5vh palevioletred;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &__left {
     position: absolute;
     top: 3vh;
@@ -37,9 +40,6 @@
   }
   &__user-name {
     font-size: 3vh;
-    position: absolute;
-    top: 3vh;
-    left: 45.5vw;
     a {
       color: pink;
       text-decoration: none;
@@ -47,16 +47,10 @@
   }
   &__new-title {
     font-size: 3vh;
-    position: absolute;
-    top: 2.5vh;
-    left: 40vw;
     color: pink;
   }
   &__top-title {
     font-size: 3vh;
-    position: absolute;
-    top: 2.5vh;
-    left: 35vw;
     color: pink;
     span {
       vertical-align: middle;
@@ -101,6 +95,15 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position: relative;
+        .fa-star {
+          position: absolute;
+          top: 1vh;
+          right: 2.7vw;
+          font-size: 3vh;
+          color: rgb(133, 2, 126);
+          cursor: pointer;
+        }
         &__name {
           height: 30%;
           span {
@@ -148,6 +151,28 @@
   height: 10vh;
   background-color: palevioletred;
   border: solid 0.5vh rgb(201, 79, 8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    text-decoration: none;
+    .haiku-btn__favorite {
+      height: 7vh;
+      width: 15vw;
+      background-color: yellow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(243, 125, 89);
+      border: solid 0.5vh rgb(201, 124, 8);
+      border-radius: 2vh;
+      span {
+        display: inline-block;
+        color: rgb(133, 2, 126);
+        font-size: 2.5vh;
+      }
+    }
+  }
 }
 
 

@@ -7,3 +7,6 @@
 .haiku-middle
   = render partial: 'google-map', locals: { haikus: @haikus }
 .haiku-btn
+  = link_to favorites_path do
+    .haiku-btn__favorite
+      %span お気に入りの俳句

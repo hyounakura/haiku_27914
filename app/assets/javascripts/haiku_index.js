@@ -26,6 +26,16 @@ $(function(){
     return html;
   };
 
+  function canfav(data){
+    let html = `<i class="fa fa-star" data-icon-id=${data}></i>`
+    return html
+  };
+
+  function removefav(data){
+    let html = `<i class="far fa-star"  data-icon-id=${data}></i>`
+    return html
+  };
+
   let path =  location.pathname
   if (path == "/") {
     navigator.geolocation.watchPosition(
@@ -34,7 +44,6 @@ $(function(){
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
         const distance = $("select").val();
-        console.log(distance);
         $.ajax({
           url: "/",
           type: "GET",
@@ -43,11 +52,14 @@ $(function(){
         })
         .done(function(haikus) {
           if (haikus.length !== 0) {
-            let insertHTML = '';
+            $(".haiku-middle").empty();
             $.each(haikus, function(i, haiku) {
-              insertHTML += buildHTML(haiku)
-              $(".haiku-middle").empty();
-              $(".haiku-middle").append(insertHTML);
+              $(".haiku-middle").prepend(buildHTML(haiku));
+              if (haiku.favorite){
+                $(`div[data-haiku-id='${haiku.id}']`).find(".haiku-middle__contents__content__left").append(canfav(haiku.id));
+              }else{
+                $(`div[data-haiku-id='${haiku.id}']`).find(".haiku-middle__contents__content__left").append(removefav(haiku.id));
+              };
             });
           }
         })
@@ -73,12 +85,39 @@ $(function(){
         };
       }
     );
+
+    $(document).on('click', '.far', function() {
+      const haiku_id = $(this).parents('.haiku-middle__contents').data();
+      $.ajax({
+        url: "/favorites",
+        type: "POST",
+        dataType: 'json',
+        data: haiku_id
+      })
+      .done(function(data) {
+        $(`i[data-icon-id=${data.id}]`).remove();
+        $(`div[data-haiku-id=${data.id}]`).find('.haiku-middle__contents__content__left').append(canfav(data.id));
+      })
+      .fail(function() {
+        alert('error');
+      });
+    });
+
+    $(document).on('click', '.fa', function() {
+      const haiku_id = $(this).parents('.haiku-middle__contents').data();
+      $.ajax({
+        url: `/favorites/${haiku_id.haikuId}`,
+        type: "DELETE",
+        dataType: 'json',
+        data: haiku_id
+      })
+      .done(function(data) {
+        $(`i[data-icon-id=${data.id}]`).remove();
+        $(`div[data-haiku-id=${data.id}]`).find('.haiku-middle__contents__content__left').append(removefav(data.id));
+      })
+      .fail(function() {
+        alert('error');
+      });
+    });
   };
 });
-
-// if( navigator.geolocation ){
-//   // 現在位置を取得できる場合の処理
-//   console.log('ok')
-//   } else {
-//   // 現在位置を取得できない場合の処理
-//   }

@@ -3,7 +3,7 @@ class HaikusController < ApplicationController
     latitude = params[:latitude]
     longitude = params[:longitude]
     distance = params[:distance]
-    @haikus = Haiku.within_box(distance, latitude, longitude)
+    @haikus = Haiku.within_box(distance, latitude, longitude).order(id: :DESC).limit(100)
     respond_to do |format|
       format.html
       format.json

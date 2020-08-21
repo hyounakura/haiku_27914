@@ -7,4 +7,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @haikus = Haiku.where(['user_id LIKE(?)', "%#{params[:id]}%"])
   end
+
+  def like
+
+  end
 end
