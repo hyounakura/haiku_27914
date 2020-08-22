@@ -5,14 +5,23 @@
     = link_to user_path(@haiku.user.id) do
       %span= @haiku.user.name
       %span>さん
-.haiku-new-middle
-  .haiku-new-middle__kami
-    .haiku-new-middle__kami__content
+.haiku-show-middle
+  .haiku-show-middle__kami
+    .haiku-show-middle__kami__content
       = @haiku.kami
-  .haiku-new-middle__naka
-    .haiku-new-middle__naka__content
+  .haiku-show-middle__naka
+    .haiku-show-middle__naka__content
       = @haiku.naka
-  .haiku-new-middle__simo
-    .haiku-new-middle__simo__content
+  .haiku-show-middle__simo
+    .haiku-show-middle__simo__content
       = @haiku.simo
-.haiku-new-btn
+.haiku-show-btn
+  .haiku-show-btn__favorite
+    = icon('fa', 'star')
+    = @fav_count
+  .haiku-show-btn__created-at
+    %span= pick_out_prefecture(@haiku.address)
+    %span>=pick_out_city(@haiku.address)
+    %span=pick_out_ward(@haiku.address)
+    &ensp;
+    %span= @haiku.created_at.strftime("%Y年 %m月%d日 %H時%M分")

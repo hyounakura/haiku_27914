@@ -10,3 +10,9 @@
   = link_to favorites_path do
     .haiku-btn__favorite
       %span お気に入りの俳句
+  = link_to destroy_user_session_path, method: :delete do
+    .haiku-btn__logout
+      %span ログアウト
+  = link_to follows_path do
+    .haiku-btn__follow
+      %span 友達リスト

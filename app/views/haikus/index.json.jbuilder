@@ -6,5 +6,9 @@ json.array! @haikus do |haiku|
   json.prefecture pick_out_prefecture(haiku.address)
   json.user_id haiku.user_id
   json.created_at time_ago_in_words(haiku.created_at)
-  json.favorite haiku.favorite if haiku.favorite.user_id == current_user.id if haiku.favorite.present?
+  if haiku.favorites.present?
+    haiku.favorites.each do |favorite|
+      json.favorites haiku.favorites if favorite.user_id == current_user.id
+    end
+  end
 end

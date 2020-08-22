@@ -14,14 +14,16 @@ class FavoritesController < ApplicationController
 
   def destroy
     @haiku = Haiku.find(params[:haikuId])
-    @favorite = Favorite.find(@haiku.favorite.id)
+    favorites = @haiku.favorites
+    favorites.each do |favorite|
+      @favorite = Favorite.find(favorite.id) if favorite.user_id == current_user.id
+    end
     if @favorite.destroy
       respond_to do |format|
         format.json
       end
     end
   end
-
 
   private
 

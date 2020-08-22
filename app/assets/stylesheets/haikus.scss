@@ -154,12 +154,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  &__created-at {
+    position: absolute;
+    right: 0.5vw;
+    bottom: 0;
+    font-size: 2vh;
+    color: rgb(133, 2, 126);
+  }
   a {
     text-decoration: none;
     .haiku-btn__favorite {
       height: 7vh;
       width: 15vw;
-      background-color: yellow;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -170,6 +177,42 @@
         display: inline-block;
         color: rgb(133, 2, 126);
         font-size: 2.5vh;
+      }
+    }
+    .haiku-btn__follow {
+      height: 7vh;
+      width: 15vw;
+      position: absolute;
+      top: 1vh;
+      right: 1vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(243, 125, 89);
+      border: solid 0.5vh rgb(201, 124, 8);
+      border-radius: 2vh;
+      span {
+        display: inline-block;
+        color: rgb(133, 2, 126);
+        font-size: 2.5vh;
+      }
+    }
+    .haiku-btn__logout {
+      position: absolute;
+      top: 2vh;
+      left: 0.5vw;
+      height: 5vh;
+      width: 6vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(243, 125, 89);
+      border: solid 0.5vh rgb(201, 124, 8);
+      border-radius: 2vh;
+      span {
+        display: inline-block;
+        color: rgb(133, 2, 126);
+        font-size: 1.6vh;
       }
     }
   }

@@ -4,6 +4,12 @@
   .haiku-user-top__user-name
     %span= @user.name
     %span>さんの俳句一覧
+  - if  @user != current_user
+    #follow_form
+      - if current_user.following?(@user)
+        = render "unfollow"
+      - else
+        = render "follow"
 .haiku-middle
   = render partial: 'google-map', locals: { haikus: @haikus }
 .haiku-btn

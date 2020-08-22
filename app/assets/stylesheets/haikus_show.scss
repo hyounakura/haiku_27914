@@ -1,0 +1,63 @@
+.haiku-show-middle {
+  height: 75vh;
+  background-color: white;
+  &__kami {
+    height: 33.3%;
+    position: relative;
+    &__content {
+      font-size: 5vh;
+      font-family: 'HuiFontP109';
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      opacity: 0;
+    }
+  }
+  &__naka {
+    height: 33.3%;
+    position: relative;
+    &__content {
+      font-size: 5vh;
+      font-family: 'HuiFontP109';
+      position: absolute;
+      top: 45%;
+      left: 33%;
+      opacity: 0;
+    }
+  }
+  &__simo {
+    height: 33.4%;
+    position: relative;
+    &__content {
+      font-size: 5vh;
+      font-family: 'HuiFontP109';
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      opacity: 0;
+    }
+  }
+}
+
+.haiku-show-btn {
+  height: 15vh;
+  background-color: palevioletred;
+  border: solid 0.5vh rgb(201, 79, 8);
+  position: relative;
+  &__favorite {
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    color: rgb(133, 2, 126);
+    font-size: 3vh;
+    opacity: 0;
+  }
+  &__created-at {
+    position: absolute;
+    right: 0.5vw;
+    bottom: 0;
+    font-size: 2.5vh;
+    color: rgb(133, 2, 126);
+    opacity: 0;
+  }
+}

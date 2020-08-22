@@ -4,4 +4,10 @@ Rails.application.routes.draw do
   resources :haikus, only: [:index, :new, :create, :show]
   resources :users, only: [:index, :show]
   resources :favorites, only: [:index, :create, :destroy]
+  resources :users do
+    member do
+     get :following, :followed
+    end
+  end
+  resources :follows, only: [:index, :create, :destroy]
 end
