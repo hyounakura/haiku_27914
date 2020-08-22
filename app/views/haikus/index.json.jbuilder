@@ -8,9 +8,7 @@ json.array! @haikus do |haiku|
   json.created_at time_ago_in_words(haiku.created_at)
   if haiku.favorites.present?
     haiku.favorites.each do |favorite|
-      if favorite.user_id == current_user.id
-        json.favorites haiku.favorites
-      end
+      json.favorites haiku.favorites if favorite.user_id == current_user.id
     end
   end
 end

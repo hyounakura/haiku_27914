@@ -16,9 +16,7 @@ class FavoritesController < ApplicationController
     @haiku = Haiku.find(params[:haikuId])
     favorites = @haiku.favorites
     favorites.each do |favorite|
-      if favorite.user_id == current_user.id
-        @favorite = Favorite.find(favorite.id)
-      end
+      @favorite = Favorite.find(favorite.id) if favorite.user_id == current_user.id
     end
     if @favorite.destroy
       respond_to do |format|
@@ -26,7 +24,6 @@ class FavoritesController < ApplicationController
       end
     end
   end
-
 
   private
 
