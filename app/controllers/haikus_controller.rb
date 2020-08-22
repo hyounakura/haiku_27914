@@ -25,6 +25,7 @@ class HaikusController < ApplicationController
 
   def show
     @haiku = Haiku.find(params[:id])
+    @fav_count = @haiku.favorites.count
   end
 
   private

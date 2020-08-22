@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_20_064027) do
+ActiveRecord::Schema.define(version: 2020_08_22_025137) do
 
   create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 2020_08_20_064027) do
     t.index ["haiku_id"], name: "index_favorites_on_haiku_id"
     t.index ["user_id", "haiku_id"], name: "index_favorites_on_user_id_and_haiku_id", unique: true
     t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "follows", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "following_id", null: false
+    t.bigint "followed_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["followed_id"], name: "index_follows_on_followed_id"
+    t.index ["following_id", "followed_id"], name: "index_follows_on_following_id_and_followed_id", unique: true
+    t.index ["following_id"], name: "index_follows_on_following_id"
   end
 
   create_table "haikus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -50,5 +60,7 @@ ActiveRecord::Schema.define(version: 2020_08_20_064027) do
 
   add_foreign_key "favorites", "haikus"
   add_foreign_key "favorites", "users"
+  add_foreign_key "follows", "users", column: "followed_id"
+  add_foreign_key "follows", "users", column: "following_id"
   add_foreign_key "haikus", "users"
 end

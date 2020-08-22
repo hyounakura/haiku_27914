@@ -1,0 +1,19 @@
+.haiku-top
+  = link_to users_path do
+    = icon('fa', 'user', class: "haiku-top__icon")
+  .haiku-user-top__user-name
+    %span 友達リスト
+.haiku-middle
+  - @friends.each do |friend|
+    .haiku-middle__contents
+      .haiku-middle__contents__content
+        .haiku-middle__contents__content__left
+          .haiku-middle__contents__content__left__name
+            = link_to user_path(friend.following.id) do
+              %span=friend.following.name
+              %span> さん
+          .haiku-middle__contents__content__left__haiku
+            %span>今までに
+            %span=friend.following.haikus.count
+            %span> 個の俳句を詠んでいます。
+.haiku-btn

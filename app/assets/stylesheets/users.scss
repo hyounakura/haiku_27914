@@ -19,4 +19,31 @@
     left: 1.5%;
     font-size: 5vh;
   }
+  #follow_form {
+    position: absolute;
+    top: 25%;
+    right: 1.5%;
+    border: solid 0.5vh rgb(201, 124, 8);
+    border-radius: 1vh;
+    background-color: rgb(243, 125, 89);
+    form {
+      height: 4vh;
+      input {
+        border-radius: 1vh;
+        height: 100%;
+        appearance: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        background-color: rgb(243, 125, 89);
+        color: rgb(133, 2, 126);
+        font-size: 2vh;
+      }
+      .unfollow {
+        background-color: rgb(255, 71, 71);
+      }
+
+    }
+  }
 }

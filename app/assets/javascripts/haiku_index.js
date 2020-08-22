@@ -55,7 +55,7 @@ $(function(){
             $(".haiku-middle").empty();
             $.each(haikus, function(i, haiku) {
               $(".haiku-middle").prepend(buildHTML(haiku));
-              if (haiku.favorite){
+              if (haiku.favorites){
                 $(`div[data-haiku-id='${haiku.id}']`).find(".haiku-middle__contents__content__left").append(canfav(haiku.id));
               }else{
                 $(`div[data-haiku-id='${haiku.id}']`).find(".haiku-middle__contents__content__left").append(removefav(haiku.id));
