@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root "haikus#index"
-  resources :haikus, only: [:index, :new, :create, :show]
+  resources :haikus, only: [:index, :new, :create, :show, :destroy]
   resources :users, only: [:index, :show]
   resources :favorites, only: [:index, :create, :destroy]
   resources :users do

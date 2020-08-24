@@ -1,6 +1,9 @@
 .haiku-top
   = link_to root_path, class: "mypage" do
     = icon('fa', 'home')
+  - if current_user == @haiku.user
+    = link_to haiku_path(@haiku.id), method: :delete, data: { confirm: '削除しますか？' }, class: "create-haiku" do
+      = icon('fa', 'trash', class: "haiku-top__create-icon")
   .haiku-top__user-name
     = link_to user_path(@haiku.user.id) do
       %span= @haiku.user.name
