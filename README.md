@@ -1,25 +1,21 @@
 # 俳句アプリ
 
 
-* アプリケーション概要
+## アプリケーション概要
 
-* URL
+## URL
 
-* テスト用アカウント
+## テスト用アカウント
 
-* 利用方法
+## 目指した課題解決
 
-* 目指した課題解決
+## 工夫した点
 
-* 洗い出した要件
+## 実装した機能についてのGIFと説明
 
-* 実装した機能についてのGIFと説明
+## データベース設計
 
-* ローカルでの動作方法
-
-* データベース設計
-
-## Userテーブル
+### Userテーブル
 
 |Column|Type|Option|
 |------|----|------|
@@ -27,7 +23,7 @@
 |email|string|null: false, unique: true|
 |password|string|null: false, unique:true|
 
-### Association
+#### Association
 
 - has_many  :groups, through: :user_groups
 - has_many  :user_groups
