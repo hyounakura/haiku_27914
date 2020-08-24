@@ -1,6 +1,8 @@
 # 俳句アプリ
 
-<a href="https://gyazo.com/d589b1278b37b6eca8f8e4af74297043"><img src="https://i.gyazo.com/d589b1278b37b6eca8f8e4af74297043.png" alt="Image from Gyazo" width="800"/></a>
+<a href="https://gyazo.com/028aeb19a7454c3a1c2b6151b11f8025"><img src="https://i.gyazo.com/028aeb19a7454c3a1c2b6151b11f8025.png" alt="Image from Gyazo" width="800"/></a>
+
+<a href="https://gyazo.com/d589b1278b37b6eca8f8e4af74297043"><img src="https://i.gyazo.com/d589b1278b37b6eca8f8e4af74297043.png" alt="Image from Gyazo" width="600"/></a>
 
 
 ## アプリケーション概要
