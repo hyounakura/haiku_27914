@@ -38,6 +38,14 @@
     right: 2%;
     font-size: 5vh;
   }
+  .fa-trash {
+    display: block;
+    color: plum;
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    font-size: 4vh;
+  }
   &__user-name {
     font-size: 3vh;
     a {
@@ -218,9 +226,17 @@
   }
 }
 
+.scroll-bottom__icon {
+  font-size: 7vh;
+  color: rgb(133, 2, 126);
+  position: absolute;
+  bottom: 15vh;
+  right: 5vw;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 480px) {
-
-
-
+  
+  
+  
 }

@@ -2,8 +2,7 @@
   = link_to root_path, class: "mypage" do
     = icon('fa', 'home')
   .haiku-user-top__user-name
-    %span= current_user.name
-    %span> さんの俳句一覧
+    %span マイページ
 .haiku-middle
   = render partial: 'google-map', locals: { haikus: @haikus }
 .haiku-btn

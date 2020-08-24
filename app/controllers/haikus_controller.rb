@@ -28,6 +28,13 @@ class HaikusController < ApplicationController
     @fav_count = @haiku.favorites.count
   end
 
+  def destroy
+    @haiku = Haiku.find(params[:id])
+    if @haiku.destroy
+      redirect_to root_path
+    end
+  end
+
   private
 
   def haiku_params

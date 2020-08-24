@@ -4,6 +4,11 @@
   .haiku-top__new-title
     一句詠んでください
 .haiku-new-middle
+  - if @haiku.errors.any?
+    #error_explanation
+      %ul
+        - @haiku.errors.full_messages.each do |message|
+          %li= message
   .haiku-new-middle__kami
     .haiku-new-middle__kami__content
   .haiku-new-middle__naka
