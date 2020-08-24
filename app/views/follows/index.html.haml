@@ -4,7 +4,7 @@
   .haiku-user-top__user-name
     %span 友達リスト
 .haiku-middle
-  - @friends.each do |friend|
+  - @friends.each.reverse_each do |friend|
     .haiku-middle__contents
       .haiku-middle__contents__content
         .haiku-middle__contents__content__left

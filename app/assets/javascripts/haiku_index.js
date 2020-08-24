@@ -54,7 +54,7 @@ $(function(){
           if (haikus.length !== 0) {
             $(".haiku-middle").empty();
             $.each(haikus, function(i, haiku) {
-              $(".haiku-middle").prepend(buildHTML(haiku));
+              $(".haiku-middle").append(buildHTML(haiku));
               if (haiku.favorites){
                 $(`div[data-haiku-id='${haiku.id}']`).find(".haiku-middle__contents__content__left").append(canfav(haiku.id));
               }else{

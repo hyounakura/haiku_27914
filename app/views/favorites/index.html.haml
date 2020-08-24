@@ -5,7 +5,7 @@
     %span= current_user.name
     %span> さんのお気に入り俳句一覧
 .haiku-middle
-  - @favorites.each do |fav|
+  - @favorites.each.reverse_each do |fav|
     .haiku-middle__contents
       .haiku-middle__contents__content
         .haiku-middle__contents__content__left
