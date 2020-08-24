@@ -5,9 +5,11 @@
 <a href="https://gyazo.com/d589b1278b37b6eca8f8e4af74297043"><img src="https://i.gyazo.com/d589b1278b37b6eca8f8e4af74297043.png" alt="Image from Gyazo" width="600"/></a>
 
 
-## アプリケーション概要
+## アプリケーション概要  
+現在地の位置情報を使い、過去にその近くで詠まれた俳句を取得しviewに表示させるように実装しました。位置情報を使った実装をしてみたいと思い、今いる場所で誰かが考えたことが知れたら面白いと思ったのでこのアプリケーションを作成しました。
 
 ## URL
+https://haiku-27914.herokuapp.com/
 
 ## テスト用アカウント
 
