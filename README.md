@@ -12,6 +12,10 @@
 https://haiku-27914.herokuapp.com/
 
 ## テスト用アカウント
+* email  
+t@t  
+* password  
+ta1234
 
 ## 目指した課題解決
 
