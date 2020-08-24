@@ -25,7 +25,8 @@ GoogleCloudPlatformAPIを導入し、マイページにgoogleマップを表示�
 
 ## 実装した機能についてのGIFと説明
 * マイページに詠んだ俳句がmap上のマーカーで表示できるように実装しました。
-<a href="https://gyazo.com/4cc63a3f3655043bd3f30bbd0b7592bc"><img src="https://i.gyazo.com/4cc63a3f3655043bd3f30bbd0b7592bc.gif" alt="Image from Gyazo" width="800"/></a>
+
+<a href="https://gyazo.com/4cc63a3f3655043bd3f30bbd0b7592bc"><img src="https://i.gyazo.com/4cc63a3f3655043bd3f30bbd0b7592bc.gif" alt="Image from Gyazo" width="600"/></a>
 
 ## データベース設計
 
