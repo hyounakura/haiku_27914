@@ -30,15 +30,15 @@ GoogleCloudPlatformAPIを導入し、マイページにgoogleマップを表示�
 
 * 俳句をアニメーションで表示させ、お気に入り数や詠んだ場所を表示できるように実装しました。
 
-<a href="https://gyazo.com/a5ade95307153b969a0f1d1b83ddb6dc"><img src="https://i.gyazo.com/a5ade95307153b969a0f1d1b83ddb6dc.png" alt="Image from Gyazo" width="800"/></a>
+<a href="https://gyazo.com/a5ade95307153b969a0f1d1b83ddb6dc"><img src="https://i.gyazo.com/a5ade95307153b969a0f1d1b83ddb6dc.png" alt="Image from Gyazo" width="600"/></a>
 
 * 非同期通信でお気に入り機能を実装し、お気に入りの俳句で表示できます。
 
-<a href="https://gyazo.com/5c486d97f88873ba982be3427cef9ca4"><img src="https://i.gyazo.com/5c486d97f88873ba982be3427cef9ca4.gif" alt="Image from Gyazo" width="800"/></a>
+<a href="https://gyazo.com/5c486d97f88873ba982be3427cef9ca4"><img src="https://i.gyazo.com/5c486d97f88873ba982be3427cef9ca4.gif" alt="Image from Gyazo" width="600"/></a>
 
 * 非同期通信でフォロー機能を実装し、友達リストで表示できます。
 
-<a href="https://gyazo.com/b9b67b395efb36f9b0ebe6a3dfb21199"><img src="https://i.gyazo.com/b9b67b395efb36f9b0ebe6a3dfb21199.gif" alt="Image from Gyazo" width="800"/></a>
+<a href="https://gyazo.com/b9b67b395efb36f9b0ebe6a3dfb21199"><img src="https://i.gyazo.com/b9b67b395efb36f9b0ebe6a3dfb21199.gif" alt="Image from Gyazo" width="600"/></a>
 
 ## データベース設計
 
