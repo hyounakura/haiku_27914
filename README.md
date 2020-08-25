@@ -30,7 +30,7 @@ GoogleCloudPlatformAPIを導入し、マイページにgoogleマップを表示�
 
 * 俳句をアニメーションで表示させ、お気に入り数や詠んだ場所を表示できるように実装しました。
 
-<a href="https://gyazo.com/a5ade95307153b969a0f1d1b83ddb6dc"><img src="https://i.gyazo.com/a5ade95307153b969a0f1d1b83ddb6dc.png" alt="Image from Gyazo" width="600"/></a>
+<a href="https://gyazo.com/f0e5804f32de0d2b76b82cbe2c98d76b"><img src="https://i.gyazo.com/f0e5804f32de0d2b76b82cbe2c98d76b.gif" alt="Image from Gyazo" width="600"/></a>
 
 * 非同期通信でお気に入り機能を実装し、お気に入りの俳句で表示できます。
 
